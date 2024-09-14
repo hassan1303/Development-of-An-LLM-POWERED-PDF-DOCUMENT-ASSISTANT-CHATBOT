@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>DEVELOPMENT OF AN LLM-POWERED PDF DOCUMENT ASSISTANT CHATBOT</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+</head>
+
+<body>
+   <!-- header section start -->
+   <div class="header_section">
+      <div class="header_main">
+         <div class="mobile_menu">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="logo_mobile"><a class="logoImg" href="home.html">PDF BASED CHATBOT AI</a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                     <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                     </li>                
+                     <li>
+                        <form class="d-flex" role="search">
+                            <a href="/logout/" class="btn btn-outline-success btn-light  " type="submit">Logout</a>
+                          </form>
+                    </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+         <div class="container-fluid">
+            <div class="logo"><a class="logoImg" href="#">DEVELOPMENT OF AN LLM-POWERED PDF DOCUMENT ASSISTANT CHATBOT</a></div>
+            <div class="menu_main">
+               <ul>
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="{% url 'logout' %}">Logout</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="banner_section layout_padding">
+         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <p class="banner_text"></p>
+                     <div class="read_bt"><a href="{% url 'ask_question' %}">Chat With PDF</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
